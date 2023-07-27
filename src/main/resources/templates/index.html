@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!-- Head generico importado de Layout -->
+<head th:replace="layout/layout :: head"></head>
+
+<body>
+    <!-- Header generico importado de Layout -->
+    <header th:replace="layout/layout :: header" />
+
+    <!-- Contenido de la pagina -->
+    <div class="container">
+      <!-- Carrusel de fotos importado de layout -->
+      <div th:replace="layout/layout :: carrusel"></div>
+        <div class="row">
+          <div class="col-12">
+              <h1 class="display-4 text-center my-5">CRUD by Javier Mejia</h1>              
+              <div class="row">
+                <div class="col-md-6">
+                  <h1 class="text-center my-2">¿Quien Soy?</h1>
+                  <h5 class="text-center mb-2">Mi nombre es Javier Mejia, Ingeniero en Software y Sistemas Computacionales, creador de esta aplicacion web utilizando Spring Boot, Thymeleaf, Bootstrap y MySQL.
+                  </h5>
+                  <img class="rounded-circle img-fluid mx-auto d-block" src="https://avatars.githubusercontent.com/u/120158035?v=4" alt="javiermh20" style="width: 300px;">
+                  <div class="text-center mt-2">
+                    <!-- GitHub image -->
+                    <a href="https://github.com/your_username" target="_blank">
+                      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 50px; height: 50px;">
+                    </a>
+                    <!-- Facebook image -->
+                    <a href="https://www.facebook.com/your_username" target="_blank">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook" style="width: 50px; height: 50px;">
+                    </a>
+                    <!-- Twitter image -->
+                    <a href="https://twitter.com/your_username" target="_blank">
+                      <img src="https://img.freepik.com/iconos-gratis/gorjeo_318-674515.jpg" alt="Twitter" style="width: 50px; height: 50px;">
+                    </a>
+                    <!-- Instagram image -->
+                    <a href="https://twitter.com/your_username" target="_blank">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram" style="width: 50px; height: 50px;">
+                    </a>
+                  </div>
+                  <br>
+                  <h5 class="text-center mb-2"> Javier Alejandro Mejia Hernández
+                  </h5>
+                  <h5 class="text-center mb-2"> Ingeniero en Software y Sistemas Computacionales
+                  </h5>
+                  <h5 class="text-center mb-2"> Universidad La Salle Bajio
+                  </h5>
+                  <h5 class="text-center mb-2"> 21 Años
+                  </h5>
+                </div>
+                <div class="col-md-6">
+                  <ul>
+                    <h1 class="text-center display-7">CREATE</h1>
+                    <li>
+                      <div>
+                        <p>Esta funcionalidad nos permite crear nuevos elementos a nuestras tablas en la base de datos, asi como tambien nos 
+                            servira para llevar el registro de clientes, ventas, empleados o algun objeto especifico.
+                        </p>
+                      </div>
+                    </li>
+                    <h1 class="text-center display-7">READ</h1>
+                    <li>
+                      <div>
+                        <p>Esta funcionalidad nos permite ver los elementos que ya estan en nuestras tablas en la base de datos
+                            nos permite visualizar a detalle los registros que ya se encuentran guardados en nuestra BD.
+                        </p>
+                      </div>
+                    </li>
+                    <h1 class="text-center display-7">UPDATE</h1>
+                    <li>
+                      <div>
+                        <p>Esta funcionalidad nos permite actualizar los elementos que ya estan en nuestras tablas en la base de datos
+                            sirve por si hay una modificación, de cualquier parte o alguna equivocación en la creación.
+                        </p>
+                      </div>
+                    </li>
+                    <h1 class="text-center display-7">DELETE</h1>
+                    <li>
+                      <div>
+                        <p>Esta funcionalidad nos permite eliminar los elementos que ya estan en nuestras tablas en la base de datos
+                            sirve como su traduccion en ingles, la podremos utilizar cuando haya registros viejos que no queremos mas en nuestras BD.
+                        </p>
+                      </div>
+                    </li>
+                      <a href="https://blog.hubspot.es/website/que-es-crud" class="btn btn-outline-success mb-2 d-flex justify-content-center">Mas información</a>
+                  </ul>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+    <!-- Footer generico importado de layout -->
+    <footer th:replace="layout/layout :: footer" />
+</body>
+
+</html>
