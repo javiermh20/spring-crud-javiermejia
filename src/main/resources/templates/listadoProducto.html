@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- Head importado de layout -->
+<head th:replace="layout/layout :: head"></head>
+<body>
+    <!-- Header importado de layout -->
+    <header th:replace="layout/layout :: header"></header>
+
+    <!-- Contenido de la pagina -->
+    <h1 class="text-center" th:text="${titulo}"></h1>
+    
+
+    <!-- Footer de layout -->
+    <footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>

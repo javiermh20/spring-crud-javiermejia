@@ -10,7 +10,7 @@
     <header th:fragment="header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">CRUD</a>
+              <a class="navbar-brand" th:href="@{/index}">CRUD</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -19,15 +19,18 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" th:href="@{/index}">Inicio</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Clientes</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Elementos
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" th:href="@{/listadoCliente}">Clientes</a></li>
+                      <li><a class="dropdown-item" th:href="@{/listadoEmpleado}">Empleados</a></li>
+                      <li><a class="dropdown-item" th:href="@{/listadoProducto}">Productos</a></li>
+                      <li><a class="dropdown-item" th:href="@{listadoSucursal}">Sucursales</a></li>
+                    </ul>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Empleados</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Productos</a>
-                  </li>
+          
                 </ul>
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
