@@ -37,7 +37,7 @@ public class ClienteController {
     @RequestMapping(value = "/formCliente")
     public String crear(Model model){
         Cliente cliente = new Cliente();
-        model.addAttribute("titulo", "Formulario Cliente");
+        model.addAttribute("titulo", "Formulario Cliente 🤧");
         model.addAttribute("cliente", cliente);
         return "formCliente";
     }

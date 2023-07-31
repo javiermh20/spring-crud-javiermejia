@@ -24,18 +24,23 @@ public class Producto implements Serializable{
     @NotEmpty
     private String descripcion;
 
+    @NotEmpty
+    private Integer precio;
+
     public Producto() {
     }
 
-    public Producto(Long id, String nombre, String descripcion) {
+    public Producto(Long id, String nombre, String descripcion, Integer precio) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.precio = precio;
     }
 
-    public Producto(String nombre, String descripcion) {
+    public Producto(String nombre, String descripcion, Integer precio) {
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.precio = precio;
     }
 
     public Long getId() {
@@ -60,6 +65,15 @@ public class Producto implements Serializable{
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public Integer getPrecio(){
+        return precio;
+    }
+
+
+    public void setPrecio(Integer precio){
+        this.precio = precio;
     }
 
 }

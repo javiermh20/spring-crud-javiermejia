@@ -16,8 +16,8 @@ INSERT INTO sucursales (nombre, direccion, telefono) VALUES('Sucursal 3', 'Av. 3
 INSERT INTO sucursales (nombre, direccion, telefono) VALUES('Sucursal 4', 'Av. 4', '1234567899');
 INSERT INTO sucursales (nombre, direccion, telefono) VALUES('Sucursal 5', 'Av. 5', '1234567899');
 
-INSERT INTO productos (nombre, descripcion) VALUES ('Pelota', 'Pelota de futbol');
-INSERT INTO productos (nombre, descripcion) VALUES ('Balon', 'Balon de basquetbol');
-INSERT INTO productos (nombre, descripcion) VALUES ('Bate', 'Bate de beisbol');
-INSERT INTO productos (nombre, descripcion) VALUES ('Raqueta', 'Raqueta de tenis');
-INSERT INTO productos (nombre, descripcion) VALUES ('Red', 'Red de voleibol');
+INSERT INTO productos (nombre, descripcion, precio) VALUES ('Pelota', 'Pelota de futbol', 200);
+INSERT INTO productos (nombre, descripcion, precio) VALUES ('Balon', 'Balon de basquetbol', 150);
+INSERT INTO productos (nombre, descripcion, precio) VALUES ('Bate', 'Bate de beisbol', 300);
+INSERT INTO productos (nombre, descripcion, precio) VALUES ('Raqueta', 'Raqueta de tenis', 500);
+INSERT INTO productos (nombre, descripcion, precio) VALUES ('Red', 'Red de voleibol', 700);

@@ -38,7 +38,7 @@ public class ProductoController {
     @RequestMapping(value="/formProducto")
     public String crear(Model model){
         Producto producto = new Producto();
-        model.addAttribute("titulo", "Formulario Producto");
+        model.addAttribute("titulo", "Formulario Producto ⚽");
         model.addAttribute("producto", producto);
         return "formProducto";
     }

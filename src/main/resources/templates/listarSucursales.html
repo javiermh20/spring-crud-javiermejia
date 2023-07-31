@@ -5,10 +5,11 @@
 <body>
     <!-- Header importado de layout -->
     <header th:replace="layout/layout :: header"></header>
-
+    
     <!-- Contenido de la pagina -->
     <div class="container">
         <h1 class="text-center" th:text="${titulo}"></h1>
+        <div><a th:href="@{/formSucursal}" class="btn btn-primary btn-xs"> Agregar Sucursal</a></div>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -26,8 +27,8 @@
                     <td th:text="${sucursal.nombre}"></td>
                     <td th:text="${sucursal.direccion}"></td>
                     <td th:text="${sucursal.telefono}"></td>
-                    <td> <a class="btn btn-primary btn-xs" href="#" th:text="'editar'"></a></td>
-                    <td> <a class="btn btn-danger btn-sm" href="#" th:text="'eliminar'" onclick="return confirm('Est�s seguro que quieres eliminar?');"></a></td>
+                    <td> <a class="btn btn-primary btn-xs" href="#" th:text="'✍'"></a></td>
+                    <td> <a class="btn btn-danger btn-sm" href="#" th:text="'🗑'" onclick="return confirm('Est�s seguro que quieres eliminar?');"></a></td>
                 </tr>
             </tbody>
         </table>

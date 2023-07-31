@@ -37,7 +37,7 @@ public class EmpleadoController {
     @RequestMapping(value = "/formEmpleado")
     public String crear(Model model){
         Empleado empleado = new Empleado();
-        model.addAttribute("titulo", "Formulatio Empleado");
+        model.addAttribute("titulo", "Formulario Empleado 👷‍♂️");
         model.addAttribute("empleado", empleado);
         return "formEmpleado";
     }

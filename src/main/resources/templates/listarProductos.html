@@ -9,12 +9,14 @@
     <!-- Contenido de la pagina -->
     <div class="container">
         <h1 class="text-center" th:text="${titulo}"></h1>
+        <div><a th:href="@{/formProducto}" class="btn btn-primary btn-xs"> Agregar Producto</a></div>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
+                    <th>Precio</th>
                     <th>Editar</th>
                     <th>Eliminar</th>
                 </tr>
@@ -24,8 +26,9 @@
                     <td th:text="${producto.id}"></td>
                     <td th:text="${producto.nombre}"></td>
                     <td th:text="${producto.descripcion}"></td>
-                    <td> <a class="btn btn-primary btn-xs" href="#" th:text="'editar'"></a></td>
-                    <td> <a class="btn btn-danger btn-sm" href="#" th:text="'eliminar'" onclick="return confirm('Est�s seguro que quieres eliminar?');"></a></td>
+                    <td th:text="'$' + ${producto.precio}" ></td>
+                    <td> <a class="btn btn-primary btn-xs" href="#" th:text="'✍'"></a></td>
+                    <td> <a class="btn btn-danger btn-sm" href="#" th:text="'🗑'" onclick="return confirm('Est�s seguro que quieres eliminar?');"></a></td>
                 </tr>
             </tbody>
         </table>

@@ -34,7 +34,7 @@ public class SucursalController {
     @RequestMapping(value="/formSucursal")
     public String crear(Model model){
         Sucursal sucursal = new Sucursal();
-        model.addAttribute("titulo", "Formulario Sucursal");
+        model.addAttribute("titulo", "Formulario Sucursal 🏢");
         model.addAttribute("sucursal", sucursal);
         return "formSucursal";
     }

@@ -9,7 +9,7 @@
     <!-- Contenido de la pagina -->
     <div class="container py-4">
         <h1 class="text-center" th:text="${titulo}"></h1>
-
+        <div><a th:href="@{/formCliente}" class="btn btn-primary btn-xs"> Agregar Cliente</a></div>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -17,6 +17,7 @@
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Email</th>
+                    <th>Telefono</th>
                     <th>Nacimiento</th>
                     <th>Editar</th>
                     <th>Eliminar</th>
@@ -28,9 +29,10 @@
                     <td th:text="${cliente.nombre}"></td>
                     <td th:text="${cliente.apellido}"></td>
                     <td th:text="${cliente.email}"></td>
+                    <td th:text="${cliente.telefono}"></td>
                     <td th:text="${cliente.fechaNacimiento}"></td>
-                    <td> <a class="btn btn-primary btn-xs" href="#" th:text="'editar'"></a></td>
-                    <td> <a class="btn btn-danger btn-sm" href="#" th:text="'eliminar'" onclick="return confirm('Est�s seguro que quieres eliminar?');"></a></td>
+                    <td> <a class="btn btn-primary btn-xs" href="#" th:text="'✍'"></a></td>
+                    <td> <a class="btn btn-danger btn-sm" href="#" th:text="'🗑'" onclick="return confirm('Est�s seguro que quieres eliminar?');"></a></td>
                 </tr>
             </tbody>
         </table>
