@@ -9,6 +9,28 @@
     <!-- Contenido de la pagina -->
     <div class="container">
         <h1 class="text-center" th:text="${titulo}"></h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Telefono</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="sucursal: ${sucursales}">
+                    <td th:text="${sucursal.id}"></td>
+                    <td th:text="${sucursal.nombre}"></td>
+                    <td th:text="${sucursal.direccion}"></td>
+                    <td th:text="${sucursal.telefono}"></td>
+                    <td> <a class="btn btn-primary btn-xs" href="#" th:text="'editar'"></a></td>
+                    <td> <a class="btn btn-danger btn-sm" href="#" th:text="'eliminar'" onclick="return confirm('Est�s seguro que quieres eliminar?');"></a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <!-- Footer de layout -->

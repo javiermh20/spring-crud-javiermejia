@@ -1,5 +1,7 @@
 package com.javiermejia.crud_prueba.controllers;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,14 +27,14 @@ public class ClienteController {
 
     @RequestMapping(value = "/listarClientes", method = RequestMethod.GET)
     public String listarClientes(Model model){
-        Cliente cliente = new Cliente();
+        List<Cliente> clientes = clienteService.findAll();
         
         model.addAttribute("titulo", "Listado de Clientes 🤧");
-        model.addAttribute("clientes", cliente);
+        model.addAttribute("clientes", clientes);
         return "listarClientes";
     }
 
-    @RequestMapping(value="/formCliente")
+    @RequestMapping(value = "/formCliente")
     public String crear(Model model){
         Cliente cliente = new Cliente();
         model.addAttribute("titulo", "Formulario Cliente");

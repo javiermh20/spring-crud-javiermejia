@@ -7,15 +7,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
-
 
 @Entity
 @Table(name = "empleados")
 public class Empleado implements Serializable{
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY  )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotEmpty
@@ -25,6 +25,7 @@ public class Empleado implements Serializable{
     private String apellido;
 
     @NotEmpty
+    @Email
     private String email;
 
     @NotEmpty
@@ -33,7 +34,8 @@ public class Empleado implements Serializable{
     public Empleado() {
     }
 
-    public Empleado(Long id, String nombre, String apellido, String email, String telefono) {
+    public Empleado(Long id, @NotEmpty String nombre, @NotEmpty String apellido, @NotEmpty @Email String email,
+            @NotEmpty String telefono) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -41,18 +43,19 @@ public class Empleado implements Serializable{
         this.telefono = telefono;
     }
 
-    public Empleado(String nombre, String apellido, String email, String telefono) {
+    public Empleado(@NotEmpty String nombre, @NotEmpty String apellido, @NotEmpty @Email String email,
+            @NotEmpty String telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.telefono = telefono;
     }
 
-    public Long getid() {
+    public Long getId() {
         return id;
     }
 
-    public void setid(Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -87,5 +90,5 @@ public class Empleado implements Serializable{
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
+    
 }

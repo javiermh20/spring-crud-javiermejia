@@ -1,5 +1,7 @@
 package com.javiermejia.crud_prueba.controllers;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +27,11 @@ public class ProductoController {
 
     @RequestMapping(value = "/listarProductos", method = RequestMethod.GET)
     public String listarProductos(Model model){
-        Producto producto = new Producto();
+
+        List<Producto> productos = productoService.findAll();
 
         model.addAttribute("titulo", "Listado de Productos ⚽");
-        model.addAttribute("productos", producto);
+        model.addAttribute("productos", productos);
         return "listarProductos";
     }
 

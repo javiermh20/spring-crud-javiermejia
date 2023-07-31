@@ -10,7 +10,7 @@ import com.javiermejia.crud_prueba.models.dao.EmpleadoDAO;
 import com.javiermejia.crud_prueba.models.entity.Empleado;
 
 @Service
-public class EmpleadoServiceImpl implements IEmpleadoService {
+public class EmpleadoServiceImpl implements IEmpleadoService{
     
     @Autowired
     private EmpleadoDAO empleadoDAO;

@@ -1,5 +1,7 @@
 package com.javiermejia.crud_prueba.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,10 +24,10 @@ public class SucursalController {
 
     @RequestMapping(value = "/listarSucursales", method = RequestMethod.GET)
     public String listarSucursales(Model model){
-        Sucursal sucursal = new Sucursal();
+        List<Sucursal> sucursales = sucursalService.findAll();
 
         model.addAttribute("titulo", "Listado de Sucursales 🏢");
-        model.addAttribute("sucursales", sucursal);
+        model.addAttribute("sucursales", sucursales);
         return "listarSucursales";
     }
 

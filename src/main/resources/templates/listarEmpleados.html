@@ -7,8 +7,31 @@
     <header th:replace="layout/layout :: header"></header>
 
     <!-- Contenido de la pagina -->
-    <div class="container">
+    <div class="container py-4">
         <h1 class="text-center" th:text="${titulo}"></h1>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="empleado: ${empleados}">
+                    <td th:text="${empleado.id}"></td>
+                    <td th:text="${empleado.nombre}"></td>
+                    <td th:text="${empleado.apellido}"></td>
+                    <td th:text="${empleado.email}"></td>
+                    <td> <a class="btn btn-primary btn-xs" href="#" th:text="'editar'"></a></td>
+                    <td> <a class="btn btn-danger btn-sm" href="#" th:text="'eliminar'" onclick="return confirm('Est�s seguro que quieres eliminar?');"></a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     
     <!-- Footer de layout -->

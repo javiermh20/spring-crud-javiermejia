@@ -9,7 +9,7 @@ public class InicioController {
     
     @GetMapping({"","/","/index"})
     public String inicio(Model model) {
-        model.addAttribute("titulo", "Inicio Crud 🤧");;
+        model.addAttribute("titulo", "Inicio CRUD 🤧");;
         return "index";
     }
 }
