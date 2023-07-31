@@ -29,8 +29,8 @@
                     <td th:text="${empleado.apellido}"></td>
                     <td th:text="${empleado.email}"></td>
                     <td th:text="${empleado.telefono}"></td>
-                    <td> <a class="btn btn-primary btn-xs" href="#" th:text="'✍'"></a></td>
-                    <td> <a class="btn btn-danger btn-sm" href="#" th:text="'🗑'" onclick="return confirm('Est�s seguro que quieres eliminar?');"></a></td>
+                    <td> <a th:href="@{/formEmpleado/} + ${empleado.id}" th:text="'✍'"></a></td>
+                    <td> <a th:href="@{/eliminar/} + ${empleado.id}" th:text="'🗑'" onclick="return confirm('Estás seguro que quieres eliminar?');"></a></td>    
                 </tr>
             </tbody>
         </table>

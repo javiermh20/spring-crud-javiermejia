@@ -27,9 +27,9 @@
                     <td th:text="${sucursal.nombre}"></td>
                     <td th:text="${sucursal.direccion}"></td>
                     <td th:text="${sucursal.telefono}"></td>
-                    <td> <a class="btn btn-primary btn-xs" href="#" th:text="'✍'"></a></td>
-                    <td> <a class="btn btn-danger btn-sm" href="#" th:text="'🗑'" onclick="return confirm('Est�s seguro que quieres eliminar?');"></a></td>
-                </tr>
+                    <td> <a th:href="@{/formSucursal/} + ${sucursal.id}" th:text="'✍'"></a></td>
+                    <td> <a th:href="@{/eliminar/} + ${sucursal.id}" th:text="'🗑'" onclick="return confirm('Estás seguro que quieres eliminar?');"></a></td>
+                 </tr>
             </tbody>
         </table>
     </div>

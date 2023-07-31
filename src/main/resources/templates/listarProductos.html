@@ -27,8 +27,8 @@
                     <td th:text="${producto.nombre}"></td>
                     <td th:text="${producto.descripcion}"></td>
                     <td th:text="'$' + ${producto.precio}" ></td>
-                    <td> <a class="btn btn-primary btn-xs" href="#" th:text="'✍'"></a></td>
-                    <td> <a class="btn btn-danger btn-sm" href="#" th:text="'🗑'" onclick="return confirm('Est�s seguro que quieres eliminar?');"></a></td>
+                    <td> <a th:href="@{/formProducto/} + ${producto.id}" th:text="'✍'"></a></td>
+                    <td> <a th:href="@{/eliminar/} + ${producto.id}" th:text="'🗑'" onclick="return confirm('Estás seguro que quieres eliminar?');"></a></td>
                 </tr>
             </tbody>
         </table>
