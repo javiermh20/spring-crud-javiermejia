@@ -28,7 +28,7 @@
                     <td th:text="${sucursal.direccion}"></td>
                     <td th:text="${sucursal.telefono}"></td>
                     <td> <a th:href="@{/formSucursal/} + ${sucursal.id}" th:text="'✍'"></a></td>
-                    <td> <a th:href="@{/eliminar/} + ${sucursal.id}" th:text="'🗑'" onclick="return confirm('Estás seguro que quieres eliminar?');"></a></td>
+                    <td> <a th:href="@{/eliminarSucursal/} + ${sucursal.id}" th:text="'🗑'" onclick="return confirm('Estás seguro que quieres eliminar?');"></a></td>
                  </tr>
             </tbody>
         </table>
